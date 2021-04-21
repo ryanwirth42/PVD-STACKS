@@ -1,0 +1,753 @@
+* {
+  box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: axia, sans-serif;
+  font-weight: 700;
+  margin: 0; }
+
+p {
+  font-family: axia, sans-serif; }
+
+body {
+  margin: 0;
+  height: 100vh; }
+
+a {
+  text-decoration: none;
+  font-family: axia, sans-serif; }
+
+.pagelogin {
+  background-image: url("https://images.pexels.com/photos/159291/beer-machine-alcohol-brewery-159291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .pagelogin main {
+    position: relative;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    place-items: center;
+    padding: 2rem; }
+  .pagelogin .blur {
+    animation-name: rotate;
+    animation-fill-mode: forwards;
+    animation-duration: 60s;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    transition: all; }
+  .pagelogin img {
+    width: 375px; }
+  .pagelogin form {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 16px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    grid-template-rows: auto auto auto;
+    align-content: space-between; }
+    .pagelogin form input {
+      font-family: axia, sans-serif;
+      border-radius: 16px;
+      border: none;
+      background-color: white;
+      padding: 1rem 2rem; }
+    .pagelogin form .buttons {
+      justify-self: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem; }
+      .pagelogin form .buttons a, .pagelogin form .buttons button {
+        font-family: axia, sans-serif;
+        font-weight: 700;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 16px;
+        background-color: #00B3EB;
+        color: #212121;
+        text-decoration: none; }
+    .pagelogin form .bguest {
+      background-color: #212121 !important;
+      color: white !important; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translate(0rem); }
+  100% {
+    transform: rotate(180deg) translate(2rem); } }
+.home {
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .home main {
+    background-color: #212121;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr; }
+    .home main header {
+      position: relative;
+      grid-column: 1;
+      display: grid;
+      align-content: space-between;
+      justify-items: center;
+      padding: 2rem;
+      background-color: #eee; }
+      .home main header .logo {
+        width: 80px;
+        height: 65px; }
+      .home main header .category {
+        width: 80px; }
+      .home main header .category-last {
+        margin-bottom: 18px; }
+      .home main header .cart a {
+        position: absolute;
+        display: grid;
+        place-items: center;
+        background-color: #00B3EB;
+        color: white;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 50px; }
+    .home main .items {
+      padding: 2rem;
+      grid-column: 2;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1.25fr auto 1fr auto 1fr;
+      grid-gap: 2rem; }
+    .home main .featured {
+      grid-row: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2rem; }
+      .home main .featured h1 {
+        color: #00B3EB; }
+      .home main .featured h6 {
+        letter-spacing: 2.2px;
+        color: #605F5F;
+        text-transform: uppercase;
+        text-align: center; }
+      .home main .featured .feat-card {
+        background-image: url(../img/draft-bg.png);
+        background-size: actual;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: white;
+        display: grid;
+        text-align: center; }
+        .home main .featured .feat-card img {
+          position: absolute;
+          bottom: 1.5rem;
+          right: 1rem;
+          height: 25px; }
+        .home main .featured .feat-card:active {
+          transform: scale(0.97);
+          border: 2px solid #00B3EB; }
+      .home main .featured .previous {
+        background-image: url(../img/cashbg.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: white;
+        display: grid;
+        place-items: center; }
+        .home main .featured .previous img {
+          position: absolute;
+          bottom: 1.5rem;
+          right: 1rem;
+          height: 25px; }
+        .home main .featured .previous:active {
+          transform: scale(0.97);
+          border: 2px solid #00B3EB; }
+      .home main .featured .color-strip {
+        background-color: #FFC91E;
+        height: 15px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        border-radius: 0px 0px 8px 8px; }
+    .home main .heading {
+      grid-row: 2;
+      color: #FFC91E;
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+      .home main .heading h2 {
+        font-family: axia-stencil, sans-serif;
+        font-size: 1.75rem; }
+      .home main .heading h6 {
+        letter-spacing: 2.2px;
+        color: #FFC91E;
+        text-transform: uppercase;
+        justify-self: end;
+        align-self: end; }
+    .home main .popular {
+      grid-row: 3;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 2rem; }
+      .home main .popular h6 {
+        letter-spacing: 2.2px;
+        color: #00B3EB;
+        text-transform: uppercase; }
+      .home main .popular h3 {
+        color: #605F5F;
+        text-transform: uppercase; }
+      .home main .popular .pop-card {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: white;
+        transition: all; }
+        .home main .popular .pop-card img {
+          position: absolute;
+          bottom: 1.5rem;
+          right: 1rem;
+          height: 25px; }
+        .home main .popular .pop-card:active {
+          transform: scale(0.97);
+          border: 2px solid #00B3EB; }
+        .home main .popular .pop-card .color-strip {
+          background-color: #FFC91E;
+          height: 15px;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          border-radius: 0px 0px 8px 8px; }
+    .home main .heading2 {
+      grid-row: 4;
+      color: #FFC91E;
+      display: grid;
+      grid-template-columns: 1fr 1fr; }
+      .home main .heading2 span {
+        color: white;
+        font-family: axia, sans-serif;
+        font-weight: 400;
+        font-size: 0.9rem; }
+      .home main .heading2 h2 {
+        font-family: axia-stencil, sans-serif;
+        font-size: 1.75rem; }
+      .home main .heading2 h6 {
+        letter-spacing: 2.2px;
+        color: #FFC91E;
+        text-transform: uppercase;
+        justify-self: end;
+        align-self: end; }
+    .home main .specials {
+      grid-row: 5;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem; }
+      .home main .specials h6 {
+        letter-spacing: 2.2px;
+        color: #00B3EB;
+        text-transform: uppercase; }
+      .home main .specials h3 {
+        color: #605F5F;
+        text-transform: uppercase; }
+      .home main .specials .special-card {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: white; }
+        .home main .specials .special-card img {
+          position: absolute;
+          bottom: 1.5rem;
+          right: 1rem;
+          height: 25px; }
+        .home main .specials .special-card:active {
+          transform: scale(0.97);
+          border: 2px solid #00B3EB; }
+        .home main .specials .special-card .color-strip {
+          background-color: #FFC91E;
+          height: 15px;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          border-radius: 0px 0px 8px 8px; }
+  .home .escape-main {
+    position: absolute;
+    top: -2.5%;
+    left: -2.5%;
+    color: #212121;
+    height: 35px;
+    width: 35px;
+    background-color: #FFC91E;
+    border-radius: 50%;
+    display: grid;
+    place-items: center; }
+  .home .overlay-main {
+    background-color: rgba(33, 33, 33, 0.9);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-gap: 1rem;
+    place-items: center;
+    font-family: axia, sans-serif;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%; }
+    .home .overlay-main h1 {
+      text-transform: uppercase;
+      margin: 0;
+      color: #605F5F; }
+    .home .overlay-main h6 {
+      margin: 0;
+      color: #00B3EB;
+      line-height: 0.1;
+      letter-spacing: 3px;
+      text-transform: uppercase; }
+  .home .wrapper {
+    grid-column: 1;
+    grid-row: 1;
+    height: 40vh;
+    width: 40vh;
+    background-image: '';
+    background-size: 100px;
+    background-position: 170px 90px;
+    background-repeat: no-repeat;
+    background-color: #f8f8f8;
+    border-radius: 8px 8px 8px 8px; }
+  .home form {
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 4rem; }
+    .home form .beer {
+      padding: 2rem;
+      grid-column: 1;
+      grid-row: 1;
+      justify-self: start; }
+    .home form .reset {
+      padding: 2rem;
+      grid-column: 1;
+      grid-row: 1;
+      justify-self: end; }
+      .home form .reset button {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: none;
+        background-color: #212121;
+        color: white; }
+  .home .button {
+    grid-column: 1;
+    grid-row: 3; }
+    .home .button button {
+      border-radius: 0px 0px 8px 8px;
+      width: 100%;
+      height: 100%;
+      border: none;
+      background-color: #FFC91E; }
+  .home .group {
+    padding: 2rem;
+    grid-column: 1;
+    grid-row: 2; }
+    .home .group div {
+      margin-top: 1rem; }
+  .home .oz {
+    font-size: 0.7rem;
+    color: #00B3EB; }
+  .home ul {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: #FFC91E;
+    height: 10rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1rem;
+    grid-template-rows: 1fr;
+    place-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    text-align: center; }
+    .home ul li {
+      padding-top: 1rem;
+      padding-bottom: 1rem; }
+    .home ul span {
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 1px; }
+  .home .hide {
+    opacity: 0; }
+  .home .show {
+    z-index: 0; }
+
+.category-beer main {
+  background-color: #212121;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr; }
+  .category-beer main header {
+    position: relative;
+    grid-column: 1;
+    display: grid;
+    align-content: space-between;
+    justify-items: center;
+    padding: 2rem;
+    background-color: #eee; }
+    .category-beer main header .logo {
+      width: 80px;
+      height: 65px; }
+    .category-beer main header .category {
+      width: 80px; }
+    .category-beer main header .category-last {
+      margin-bottom: 18px; }
+    .category-beer main header .cart a {
+      position: absolute;
+      display: grid;
+      place-items: center;
+      background-color: #00B3EB;
+      color: white;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 50px; }
+  .category-beer main .items {
+    padding: 2rem;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.25fr auto 1fr auto 1fr;
+    grid-gap: 2rem; }
+  .category-beer main .featured {
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem; }
+    .category-beer main .featured h1 {
+      color: #00B3EB; }
+    .category-beer main .featured h6 {
+      letter-spacing: 2.2px;
+      color: #605F5F;
+      text-transform: uppercase;
+      text-align: center; }
+    .category-beer main .featured .feat-card {
+      background-image: url(../img/draft-bg.png);
+      background-size: actual;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: relative;
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: white;
+      display: grid;
+      text-align: center; }
+      .category-beer main .featured .feat-card img {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 1rem;
+        height: 25px; }
+      .category-beer main .featured .feat-card:active {
+        transform: scale(0.97);
+        border: 2px solid #00B3EB; }
+    .category-beer main .featured .previous {
+      background-image: url(../img/rotating.png);
+      background-size: 200px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: relative;
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: white;
+      display: grid;
+      text-align: center; }
+      .category-beer main .featured .previous img {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 1rem;
+        height: 25px; }
+      .category-beer main .featured .previous:active {
+        transform: scale(0.97);
+        border: 2px solid #00B3EB; }
+    .category-beer main .featured .color-strip {
+      background-color: #FFC91E;
+      height: 15px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      border-radius: 0px 0px 8px 8px; }
+  .category-beer main .heading {
+    grid-row: 2;
+    color: #FFC91E;
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    .category-beer main .heading h2 {
+      font-family: axia-stencil, sans-serif;
+      font-size: 1.75rem; }
+    .category-beer main .heading h6 {
+      letter-spacing: 2.2px;
+      color: #FFC91E;
+      text-transform: uppercase;
+      justify-self: end;
+      align-self: end; }
+  .category-beer main .tap {
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem; }
+    .category-beer main .tap h3 {
+      color: #605F5F;
+      text-transform: uppercase; }
+    .category-beer main .tap .tap-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      place-items: center;
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: white;
+      transition: all;
+      text-align: center; }
+      .category-beer main .tap .tap-card:active {
+        transform: scale(0.97);
+        border: 2px solid #00B3EB; }
+      .category-beer main .tap .tap-card .color-strip {
+        background-color: #FFC91E;
+        height: 15px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        border-radius: 0px 0px 8px 8px; }
+  .category-beer main .heading2 {
+    grid-row: 4;
+    color: #FFC91E;
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+    .category-beer main .heading2 span {
+      color: white;
+      font-family: axia, sans-serif;
+      font-weight: 400;
+      font-size: 0.9rem; }
+    .category-beer main .heading2 h2 {
+      font-family: axia-stencil, sans-serif;
+      font-size: 1.75rem; }
+    .category-beer main .heading2 h6 {
+      letter-spacing: 2.2px;
+      color: #FFC91E;
+      text-transform: uppercase;
+      justify-self: end;
+      align-self: end; }
+  .category-beer main .bottles {
+    grid-row: 5;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2rem; }
+    .category-beer main .bottles h6 {
+      letter-spacing: 2.2px;
+      color: #00B3EB;
+      text-transform: uppercase; }
+    .category-beer main .bottles h3 {
+      color: #605F5F;
+      text-transform: uppercase; }
+    .category-beer main .bottles .bottles-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: white; }
+      .category-beer main .bottles .bottles-card img {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 1rem;
+        height: 25px; }
+      .category-beer main .bottles .bottles-card:active {
+        transform: scale(0.97);
+        border: 2px solid #00B3EB; }
+      .category-beer main .bottles .bottles-card .color-strip {
+        background-color: #FFC91E;
+        height: 15px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        border-radius: 0px 0px 8px 8px; }
+.category-beer .escape {
+  position: absolute;
+  top: -2.5%;
+  left: -2.5%;
+  color: #212121;
+  height: 35px;
+  width: 35px;
+  background-color: #FFC91E;
+  border-radius: 50%;
+  display: grid;
+  place-items: center; }
+.category-beer .overlay {
+  background-color: rgba(33, 33, 33, 0.9);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  grid-gap: 1rem;
+  place-items: center;
+  font-family: axia, sans-serif;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%; }
+  .category-beer .overlay h1 {
+    text-transform: uppercase;
+    margin: 0;
+    color: #605F5F; }
+  .category-beer .overlay h6 {
+    margin: 0;
+    color: #00B3EB;
+    line-height: 0.1;
+    letter-spacing: 3px;
+    text-transform: uppercase; }
+.category-beer .wrapper {
+  grid-column: 1;
+  grid-row: 1;
+  height: 40vh;
+  width: 40vh;
+  background-image: '';
+  background-size: 100px;
+  background-position: 170px 90px;
+  background-repeat: no-repeat;
+  background-color: #f8f8f8;
+  border-radius: 8px 8px 8px 8px; }
+.category-beer form {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 4rem; }
+  .category-beer form .beer {
+    padding: 2rem;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start; }
+  .category-beer form .reset {
+    padding: 2rem;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end; }
+    .category-beer form .reset button {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: none;
+      background-color: #212121;
+      color: white; }
+.category-beer .button {
+  grid-column: 1;
+  grid-row: 3; }
+  .category-beer .button button {
+    border-radius: 0px 0px 8px 8px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #FFC91E; }
+.category-beer .group {
+  padding: 2rem;
+  grid-column: 1;
+  grid-row: 2; }
+  .category-beer .group div {
+    margin-top: 1rem; }
+.category-beer .oz {
+  font-size: 0.7rem;
+  color: #00B3EB; }
+.category-beer ul {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #FFC91E;
+  height: 10rem;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1rem;
+  grid-template-rows: 1fr;
+  place-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 8px;
+  text-align: center; }
+  .category-beer ul li {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+  .category-beer ul span {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px; }
+.category-beer .hide {
+  opacity: 0; }
+.category-beer .show {
+  z-index: 0; }
+
+.cart-page main {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto  auto 1fr;
+  grid-gap: 2rem;
+  padding: 2rem; }
+  .cart-page main .logo {
+    justify-self: center; }
+  .cart-page main img {
+    width: 250px; }
+  .cart-page main .order-header {
+    text-align: center; }
+  .cart-page main .order-summary {
+    padding: 2rem;
+    height: 15vh;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    width: 75vw;
+    border-radius: 8px;
+    border: 1px solid #605F5F; }
+    .cart-page main .order-summary .title {
+      align-self: center; }
+    .cart-page main .order-summary .details {
+      justify-self: end;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      place-items: center; }
+  .cart-page main .pay {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background-color: #605F5F; }
+    .cart-page main .pay a {
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-transform: uppercase; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,1028 @@
+
+$yellow: #FFC91E;
+$darkgrey: #212121;
+$grey: #605F5F;
+$blue: #00B3EB;
+
+
+
+
+* {
+	box-sizing: border-box;
+	}
+
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: axia, sans-serif;
+		font-weight: 700;
+		margin: 0;
+	}
+
+	p {
+	  font-family: axia, sans-serif;
+	}
+
+	body {
+		margin: 0;
+		height: 100vh;
+	}
+
+	a {
+		text-decoration: none;
+		font-family: axia, sans-serif;
+	}
+
+
+	//--------------------- LOGIN PAGE STYLING --------------------------------------
+
+	 .pagelogin {
+		background-image: url('https://images.pexels.com/photos/159291/beer-machine-alcohol-brewery-159291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+ 		background-size: cover;
+  		background-repeat: no-repeat;
+
+
+main {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: auto 1fr;
+  place-items: center;
+  padding: 2rem;
+}
+
+.blur {
+	animation-name: rotate;
+	animation-fill-mode: forwards;
+	animation-duration: 60s;
+  	position: absolute;
+  	top: 2rem;
+  	left: 2rem;
+  	transition: all;
+  }
+
+img {
+  width: 375px;
+}
+
+
+form {
+background-color: rgba(0, 0, 0, 0.5);
+padding: 1rem;
+border-radius: 16px;
+width: 300px;
+display: grid;
+grid-template-columns: 1fr;
+grid-gap: 1rem;
+grid-template-rows: auto auto auto;
+align-content: space-between;
+  input {
+    font-family: axia, sans-serif;
+    border-radius: 16px;
+    border: none;
+    background-color: white;
+    padding: 1rem 2rem;
+  }
+  .buttons {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    a, button {
+      font-family: axia, sans-serif;
+      font-weight: 700;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 16px;
+      background-color: #00B3EB;
+      color: #212121;
+      text-decoration: none;
+    }
+  }
+  .bguest {
+    background-color: #212121!important;
+    color: white!important;
+  }
+}
+
+
+//subtle animation for the login page
+
+	}
+
+	@keyframes rotate {
+		0% {
+			transform: rotate(0deg) translate(0rem); 
+			
+		}
+		100% {
+			transform: rotate(180deg) translate(2rem); 
+		}
+	}
+
+	//------------------- MAIN PAGE --------------------------
+
+	.home {
+ 		background-size: cover;
+ 		background-repeat: no-repeat;
+	main {
+		background-color: #212121;
+		height: 100vh;
+		display: grid;
+  		grid-template-columns: auto 1fr; 
+  		grid-template-rows: 1fr;
+  		header {
+  			position: relative;
+  			grid-column: 1;
+  			display: grid;
+    		align-content: space-between;
+    		justify-items: center;
+    		padding: 2rem;
+    		background-color: #eee;
+    		.logo {
+    			width: 80px;
+    			height: 65px;
+    		}
+    		.category {
+    			width: 80px;
+    		}
+    		.category-last {
+    		margin-bottom: 18px;
+			}
+    		.cart a {
+    			position: absolute;
+    			display: grid;
+    			place-items: center;
+    			background-color: $blue;
+    			color: white;
+    			left: 0;
+    			bottom: 0;
+    			width: 100%;
+    			height: 50px;
+    		}
+  		}
+
+
+
+  		.items {
+  			padding: 2rem;
+  			grid-column: 2;
+  			display: grid;
+  			grid-template-columns: 1fr;
+  			grid-template-rows: 1.25fr auto 1fr auto 1fr;
+  			grid-gap: 2rem;
+  		}
+  		.featured {
+  			grid-row: 1;
+  			display: grid;
+  			grid-template-columns: 1fr 1fr;
+  			grid-gap: 2rem;
+  			h1 {
+  				color: $blue;
+  			}
+  			h6 {
+  			letter-spacing: 2.2px;
+  			color: $grey;
+  			text-transform: uppercase;
+  			text-align: center;
+  			}
+  			.feat-card {
+  				background-image: url(../img/draft-bg.png);
+  				background-size: actual;
+  				background-repeat: no-repeat;
+  				background-position: center center;
+  				position: relative;
+  				padding: 1rem;
+  				border-radius: 8px;
+  				background-color: white;
+  				display: grid;
+  				text-align: center;
+  				img {
+				position: absolute;
+  				bottom: 1.5rem;
+  				right: 1rem;
+  				height: 25px;
+  			
+  				}
+  				&:active {
+  					transform: scale(0.97);
+  					border: 2px solid $blue;
+  				}
+  			}
+  				.previous {
+  				background-image: url(../img/cashbg.png);
+  				background-repeat: no-repeat;
+  				background-position: center center;
+  				position: relative;
+  				padding: 1rem;
+  				border-radius: 8px;
+  				background-color: white;
+  				display: grid;
+  				place-items: center;
+  				img {
+				position: absolute;
+  				bottom: 1.5rem;
+  				right: 1rem;
+  				height: 25px;
+  			
+  				}
+  				&:active {
+  					transform: scale(0.97);
+  					border: 2px solid $blue;
+  				}
+  				}
+  				.color-strip {
+  					background-color: #FFC91E;
+					height: 15px;
+					width: 100%;
+					position: absolute;
+					bottom: 0;
+					border-radius: 0px 0px 8px 8px;
+				}
+  			
+  		}
+
+
+//heading above the popular section
+  		.heading {
+  			grid-row: 2;
+  			color: $yellow;
+  			display: grid;
+  			grid-template-columns: 1fr 1fr;
+  			h2 {
+  				font-family: axia-stencil, sans-serif;
+  				font-size: 1.75rem;
+  			}
+  			h6 {
+  				letter-spacing: 2.2px;
+  				color: $yellow;
+  				text-transform: uppercase;
+  				justify-self: end;
+  				align-self: end;
+  			}
+  		}
+
+
+  		//these are the styling for all of the tiny icons in the project
+
+  		
+
+  		.popular {
+  			grid-row: 3;
+  			display: grid;
+  			grid-template-columns: repeat(5, 1fr);
+  			grid-gap: 2rem;
+  			h6 {
+  					letter-spacing: 2.2px;
+  					color: $blue;
+  					text-transform: uppercase;
+  				}
+  				h3 {
+  					color: $grey;
+  					text-transform: uppercase;
+  				}
+  			.pop-card {
+  				position: relative;
+  				display: grid;
+  				grid-template-columns: 1fr auto;
+  				padding: 1rem;
+  				border-radius: 8px;
+  				background-color: white;
+  				transition: all;
+  				img {
+				position: absolute;
+  				bottom: 1.5rem;
+  				right: 1rem;
+  				height: 25px;
+  			
+  				}
+  				&:active {
+  					transform: scale(0.97);
+  					border: 2px solid $blue;
+  				}
+  				.color-strip {
+  					background-color: #FFC91E;
+					height: 15px;
+					width: 100%;
+					position: absolute;
+					bottom: 0;
+					border-radius: 0px 0px 8px 8px;
+
+  				}
+  			}
+  		}
+
+
+  		//heading above the specials section
+
+
+
+		.heading2 {
+  			grid-row: 4;
+  			color: $yellow;
+  			display: grid;
+  			grid-template-columns: 1fr 1fr;
+  			span {
+  				color: white;
+  				font-family: axia, sans-serif;
+  				font-weight: 400;
+  				font-size: 0.9rem;
+
+  			}
+  			h2 {
+  				font-family: axia-stencil, sans-serif;
+  				font-size: 1.75rem;
+  			}
+  			h6 {
+  				letter-spacing: 2.2px;
+  				color: $yellow;
+  				text-transform: uppercase;
+  				justify-self: end;
+  				align-self: end;
+  			}
+  		}
+
+
+
+
+
+  		.specials {
+  			grid-row: 5;
+  			display: grid;
+  			grid-template-columns: repeat(3, 1fr);
+  			grid-gap: 2rem;
+  			h6 {
+  					letter-spacing: 2.2px;
+  					color: $blue;
+  					text-transform: uppercase;
+  				}
+  				h3 {
+  					color: $grey;
+  					text-transform: uppercase;
+  				}
+  			.special-card {
+  				position: relative;
+  				display: grid;
+  				grid-template-columns: 1fr auto;
+  				padding: 1rem;
+  				border-radius: 8px;
+  				background-color: white;
+  				img {
+				position: absolute;
+  				bottom: 1.5rem;
+  				right: 1rem;
+  				height: 25px;
+  			
+  				}
+  				&:active {
+  					transform: scale(0.97);
+  					border: 2px solid $blue;
+  				}
+  				.color-strip {
+  					background-color: #FFC91E;
+					height: 15px;
+					width: 100%;
+					position: absolute;
+					bottom: 0;
+					border-radius: 0px 0px 8px 8px;
+  				}
+  			}
+  		}
+
+	}
+
+
+//main page overlay ----------------------------------------------------------------------------------
+
+.escape-main {
+  position: absolute;
+  top: -2.5%;
+  left: -2.5%;
+  color: #212121;
+  height: 35px;
+  width: 35px;
+  background-color: #FFC91E;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.overlay-main {
+  background-color: rgba(33,33,33,0.9);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  grid-gap: 1rem;
+  place-items: center;
+  font-family: axia, sans-serif;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  h1 {
+    text-transform: uppercase;
+    margin: 0;
+    color: #605F5F;
+  }
+  h6 {
+    margin: 0;
+    color: #00B3EB;
+    line-height: 0.1;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+}
+
+.wrapper {
+  grid-column: 1;
+  grid-row: 1;
+  height: 40vh;
+  width: 40vh;
+  background-image: '';
+  background-size: 100px;
+  background-position:  170px 90px;
+  background-repeat: no-repeat;
+  background-color: #f8f8f8;
+  border-radius: 8px 8px 8px 8px;
+}
+
+form {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 4rem;
+  .beer {
+    padding: 2rem;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+  }
+  .reset {
+    padding: 2rem;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end;
+    button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    background-color: #212121;
+    color: white;
+    }
+  }
+}
+
+
+.button {
+  grid-column: 1;
+  grid-row: 3;
+  button {
+  border-radius: 0px 0px 8px 8px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #FFC91E;
+  }
+}
+
+.group {
+  padding: 2rem;
+  grid-column: 1;
+  grid-row: 2;
+  div {
+    margin-top: 1rem;
+  }
+}
+
+.oz {
+  font-size: 0.7rem;
+  color: #00B3EB;
+}
+
+ul {
+  grid-column: 1;
+  grid-row: 2;
+  li {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  }
+  background-color: #FFC91E;
+  height: 10rem;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1rem;
+  grid-template-rows: 1fr;
+  place-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 8px;
+  text-align: center;
+  span {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    
+  }
+}
+
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+	z-index: 0;
+}
+
+
+}
+
+
+//end main page overlay --------------------------------------------------------------------------
+
+	
+
+
+	//------------------- BEER PAGE --------------------------
+
+
+	.category-beer {
+ 		main {
+ 		background-color: #212121;
+		height: 100vh;
+		display: grid;
+  		grid-template-columns: auto 1fr; 
+  		grid-template-rows: 1fr;
+  		header {
+  			position: relative;
+  			grid-column: 1;
+  			display: grid;
+    		align-content: space-between;
+    		justify-items: center;
+    		padding: 2rem;
+    		background-color: #eee;
+    		.logo {
+    			width: 80px;
+    			height: 65px;
+    		}
+    		.category {
+    			width: 80px;
+    		}
+    		.category-last {
+    		margin-bottom: 18px;
+			}
+    		.cart a {
+    			position: absolute;
+    			display: grid;
+    			place-items: center;
+    			background-color: $blue;
+    			color: white;
+    			left: 0;
+    			bottom: 0;
+    			width: 100%;
+    			height: 50px;
+    		}
+  		}
+
+
+
+  		.items {
+  			padding: 2rem;
+  			grid-column: 2;
+  			display: grid;
+  			grid-template-columns: 1fr;
+  			grid-template-rows: 1.25fr auto 1fr auto 1fr;
+  			grid-gap: 2rem;
+  		}
+  		.featured {
+  			grid-row: 1;
+  			display: grid;
+  			grid-template-columns: 1fr 1fr;
+  			grid-gap: 2rem;
+  			h1 {
+  				color: $blue;
+  			}
+  			h6 {
+  			letter-spacing: 2.2px;
+  			color: $grey;
+  			text-transform: uppercase;
+  			text-align: center;
+  			}
+  			.feat-card {
+  				background-image: url(../img/draft-bg.png);
+  				background-size: actual;
+  				background-repeat: no-repeat;
+  				background-position: center center;
+  				position: relative;
+  				padding: 1rem;
+  				border-radius: 8px;
+  				background-color: white;
+  				display: grid;
+  				text-align: center;
+  				img {
+				position: absolute;
+  				bottom: 1.5rem;
+  				right: 1rem;
+  				height: 25px;
+  			
+  				}
+  				&:active {
+  					transform: scale(0.97);
+  					border: 2px solid $blue;
+  				}
+  			}
+  				.previous {
+  				background-image: url(../img/rotating.png);
+  				background-size: 200px;
+  				background-repeat: no-repeat;
+  				background-position: center center;
+  				position: relative;
+  				padding: 1rem;
+  				border-radius: 8px;
+  				background-color: white;
+  				display: grid;
+  				text-align: center;
+  				img {
+				position: absolute;
+  				bottom: 1.5rem;
+  				right: 1rem;
+  				height: 25px;
+  			
+  				}
+  				&:active {
+  					transform: scale(0.97);
+  					border: 2px solid $blue;
+  				}
+  				}
+  				.color-strip {
+  					background-color: #FFC91E;
+					height: 15px;
+					width: 100%;
+					position: absolute;
+					bottom: 0;
+					border-radius: 0px 0px 8px 8px;
+				}
+  			
+  		}
+
+
+//heading above the popular section
+  		.heading {
+  			grid-row: 2;
+  			color: $yellow;
+  			display: grid;
+  			grid-template-columns: 1fr 1fr;
+  			h2 {
+  				font-family: axia-stencil, sans-serif;
+  				font-size: 1.75rem;
+  			}
+  			h6 {
+  				letter-spacing: 2.2px;
+  				color: $yellow;
+  				text-transform: uppercase;
+  				justify-self: end;
+  				align-self: end;
+  			}
+  		}
+
+  		.tap {
+  			grid-row: 3;
+  			display: grid;
+  			grid-template-columns: repeat(5, 1fr);
+  			grid-template-rows: 1fr 1fr;
+  			grid-gap: 1rem;
+  				h3 {
+  					color: $grey;
+  					text-transform: uppercase;
+  				}
+  			.tap-card {
+  				position: relative;
+  				display: grid;
+  				grid-template-columns: 1fr auto;
+  				place-items: center;
+  				padding: 1rem;
+  				border-radius: 8px;
+  				background-color: white;
+  				transition: all;
+  				text-align: center;
+  				&:active {
+  					transform: scale(0.97);
+  					border: 2px solid $blue;
+  				}
+  				.color-strip {
+  					background-color: #FFC91E;
+					height: 15px;
+					width: 100%;
+					position: absolute;
+					bottom: 0;
+					border-radius: 0px 0px 8px 8px;
+				}
+  			}
+  		}
+
+
+  		//heading above the specials section
+
+
+
+		.heading2 {
+  			grid-row: 4;
+  			color: $yellow;
+  			display: grid;
+  			grid-template-columns: 1fr 1fr;
+  			span {
+  				color: white;
+  				font-family: axia, sans-serif;
+  				font-weight: 400;
+  				font-size: 0.9rem;
+
+  			}
+  			h2 {
+  				font-family: axia-stencil, sans-serif;
+  				font-size: 1.75rem;
+  			}
+  			h6 {
+  				letter-spacing: 2.2px;
+  				color: $yellow;
+  				text-transform: uppercase;
+  				justify-self: end;
+  				align-self: end;
+  			}
+  		}
+
+
+
+
+
+  		.bottles {
+  			grid-row: 5;
+  			display: grid;
+  			grid-template-columns: repeat(5, 1fr);
+  			grid-gap: 2rem;
+  			h6 {
+  					letter-spacing: 2.2px;
+  					color: $blue;
+  					text-transform: uppercase;
+  				}
+  				h3 {
+  					color: $grey;
+  					text-transform: uppercase;
+  				}
+  			.bottles-card {
+  				position: relative;
+  				display: grid;
+  				grid-template-columns: 1fr auto;
+  				padding: 1rem;
+  				border-radius: 8px;
+  				background-color: white;
+  				img {
+				position: absolute;
+  				bottom: 1.5rem;
+  				right: 1rem;
+  				height: 25px;
+  				}
+  				&:active {
+  					transform: scale(0.97);
+  					border: 2px solid $blue;
+  				}
+  				.color-strip {
+  					background-color: #FFC91E;
+					height: 15px;
+					width: 100%;
+					position: absolute;
+					bottom: 0;
+					border-radius: 0px 0px 8px 8px;
+
+  				}
+  			}
+  		}
+
+	}
+
+	//THIS IS WHERE THE OVERLAY STYLING BEGINS ---------------------------------
+
+	.escape {
+  position: absolute;
+  top: -2.5%;
+  left: -2.5%;
+  color: #212121;
+  height: 35px;
+  width: 35px;
+  background-color: #FFC91E;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.overlay {
+  background-color: rgba(33,33,33,0.9);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  grid-gap: 1rem;
+  place-items: center;
+  font-family: axia, sans-serif;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  h1 {
+    text-transform: uppercase;
+    margin: 0;
+    color: #605F5F;
+  }
+  h6 {
+    margin: 0;
+    color: #00B3EB;
+    line-height: 0.1;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+}
+
+.wrapper {
+  grid-column: 1;
+  grid-row: 1;
+  height: 40vh;
+  width: 40vh;
+  background-image: '';
+  background-size: 100px;
+  background-position:  170px 90px;
+  background-repeat: no-repeat;
+  background-color: #f8f8f8;
+  border-radius: 8px 8px 8px 8px;
+}
+
+form {
+  position: relative;
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 4rem;
+  .beer {
+    padding: 2rem;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+  }
+  .reset {
+    padding: 2rem;
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end;
+    button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    background-color: #212121;
+    color: white;
+    }
+  }
+}
+
+
+.button {
+  grid-column: 1;
+  grid-row: 3;
+  button {
+  border-radius: 0px 0px 8px 8px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #FFC91E;
+  }
+}
+
+.group {
+  padding: 2rem;
+  grid-column: 1;
+  grid-row: 2;
+  div {
+    margin-top: 1rem;
+  }
+}
+
+.oz {
+  font-size: 0.7rem;
+  color: #00B3EB;
+}
+
+ul {
+  grid-column: 1;
+  grid-row: 2;
+  li {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  }
+  background-color: #FFC91E;
+  height: 10rem;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1rem;
+  grid-template-rows: 1fr;
+  place-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 8px;
+  text-align: center;
+  span {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    
+  }
+}
+
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+	z-index: 0;
+}
+
+
+}
+
+
+
+// ----------------------------- THIS BEGINS THE STYLING OF THE CART PAGE --------------------------------------------------
+
+
+.cart-page {
+
+main {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: auto  auto 1fr;
+  grid-gap: 2rem;
+  padding: 2rem;
+  .logo {
+  	justify-self: center;
+  }
+  img {
+  width: 250px;
+}
+.order-header {
+	text-align: center;
+}
+.order-summary {
+	padding: 2rem;
+	height: 15vh;
+	justify-self: center;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-template-rows: 1fr;
+	width: 75vw;
+	border-radius: 8px;
+	border: 1px solid $grey;
+	.title {
+		align-self: center;
+	}
+	.details {
+		justify-self: end;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		place-items: center;
+	}
+}
+
+.pay {
+	display: grid;
+	place-items: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100px;
+	width: 100%;
+	background-color: $grey;
+	a {
+		color: white;
+		font-size: 2.5rem;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}
+}
+
+}
